@@ -20,9 +20,9 @@ const app = express()
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors({
-    origin:["http://localhost:3000","http://localhost:3001", process.env.PROD_CLIENT_URI],
-    methods:["GET","POST","PUT","DELETE"],
-    credentials:true,
+    origin: true, // Allow all origins
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
 }));
 
 
